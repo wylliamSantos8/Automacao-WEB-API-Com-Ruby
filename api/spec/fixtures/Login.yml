@@ -1,0 +1,35 @@
+---
+- title: Senha incorreta
+  payload:
+    email: wylliamsantos@gmail.com
+    password: pwd000
+  code: 401
+  error: Unauthorized
+- title: Usuario não existe
+  payload:
+    email: 404@gmail.com
+    password: pwd000
+  code: 401
+  error: Unauthorized
+- title: Email em branco
+  payload:
+    email: ''
+    password: pwd000
+  code: 412
+  error: required email
+- title: Sem o campo e-mail
+  payload:
+    password: pwd000
+  code: 412
+  error: required email
+- title: Senha em branco
+  payload:
+    email: wylliamsantos@gmail.com
+    password: ''
+  code: 412
+  error: required password
+- title: Senha o campo senha
+  payload:
+    email: wylliamsantos@gmail.com
+  code: 412
+  error: required password
